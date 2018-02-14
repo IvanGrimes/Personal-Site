@@ -1,0 +1,105 @@
+@import "https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,800&amp;subset=cyrillic"
+
+
+@import "../../bower_components/components-font-awesome/scss/font-awesome.scss"
+//@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss"
+//@import "../../bower_components/owl.carousel/src/scss/owl.theme.default.scss"
+
+@import "blocks/button"
+
+
+@import "blocks/header"
+@import "blocks/header-slider"
+@import "blocks/services"
+@import "blocks/about"
+@import "blocks/skills"
+@import "blocks/portfolio"
+@import "blocks/feedback"
+@import "blocks/footer"
+
+// TODO: Добавить всем тегам с text, значение text_size_*
+body
+	font-family: 'Fira Sans'
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+ 	-moz-osx-font-smoothing: grayscale
+	font-size: 14px
+	@include media-breakpoint-only(sm)
+		font-size: 15px
+	@include media-breakpoint-up(md)
+		font-size: 16px
+.section
+	padding: 80px 0 80px 0
+
+	grid-column: 1 / 4
+	&__header
+		&_heading
+			text-align: center
+
+			grid-column: 1/13
+		&_text
+			padding: 25px 0 45px 0
+
+			text-align: center
+
+			grid-column: 1 / 13
+			@include media-breakpoint-up(lg)
+				grid-column: 3 / 11
+
+	&_color
+		&_primary
+			background-color: #fff
+		&_secondary
+			background-color: #fbfaf8
+
+.text
+	font-weight: 300
+	line-height: 1.438
+	&_color
+		&_primary
+			color: #8c8c8c
+		&_secondary
+			color: #fff
+		&_third
+			color: #a1a1a1
+	&_size
+		&_normal
+			font-size: 1em
+		&_small
+			font-size: .875em
+
+
+.heading
+	align-self: flex-end
+
+	padding: 0 0 50px 0
+
+	color: #545454
+
+	font-size: 2.5em
+	font-weight: 600
+	line-height: 1
+	&_no
+		&_padding
+			padding: 0
+
+.link
+	padding: 0 0 5px 0
+
+	transition: color .15s linear
+	transition: border .15s linear
+
+	color: #c7b29a
+	border-bottom: 1px solid rgba(199, 178, 154, 0)
+
+	font-size: 0.875rem
+	font-weight: 400
+	line-height: 1
+	&:hover
+		color: #fff
+		border-color: rgba(199, 178, 154, 1)
+	&_underline
+		border-bottom: 1px solid rgba(199, 178, 154, 1)
+		&:hover
+			color: #fff
+			border-color: rgba(199, 178, 154, 0)

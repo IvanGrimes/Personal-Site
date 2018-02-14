@@ -1,0 +1,43 @@
+section(class="section section_color_secondary section__header", id="feedback") 
+	div(class="container")
+		h2(class="heading heading_no_padding section__header_heading") Обратная связь.
+		p(class="text text_size_normal text_color_primary section__header_text") Если Вы заинтересованы в сотрудничестве или желаете поделиться отзывами и предложениями, пожалуйста, воспользуйтесь приведенными ниже контактами или формой для связи. 
+div(class="section feedback")
+	div(class="container")
+		div(class="feedback__contacts")
+			div(class="feedback__contacts_item")
+				i(class="fa fa-paper-plane-o feedback__contacts_icon", aria-hidden="true")
+				a(class="link link_underline", href="mailto:ivan@grimesco.de") ivan@grimesco.de
+			
+			div(class="feedback__contacts_item")
+				i(class="fa fa-phone feedback__contacts_icon", aria-hidden="true")
+				a(class="link link_underline", href="tel:+7(977)811-69-19") +7&nbsp;(977)&nbsp;811-69-19
+			
+			div(class="feedback__contacts_item feedback__social")
+				i(class="fa fa-share-alt feedback__contacts_icon", aria-hidden="true")
+				a(class="feedback__social_link", href="https://www.facebook.com/grimesco.de", target="_blank")
+					i(class="fa fa-facebook feedback__social_icon")
+				a(class="feedback__social_link", href="https://www.facebook.com/grimesco.de", target="_blank")
+					i(class="fa fa-linkedin feedback__social_icon")
+				a(class="feedback__social_link", href="https://www.fl.ru/users/grimescode/", target="_blank")
+					span(class="feedback__social_icon") FL
+		
+		div(class="feedback__notification", id="feedback__messages")
+		form(class="feedback__form", id="feedback__form", method="post", action="telegram.php")
+			div(class="feedback__form_input_wrap")
+				input(class="feedback__form_input", id="feedback__form_name", type="text", placeholder="Имя", name="name", pattern="^[А-Яа-яЁёa-zA-Z]{2,80}$", required)
+				i(class="fa fa-user-o feedback__form_input_icon")
+					
+			div(class="feedback__form_input_wrap")
+				input(class="feedback__form_input", id="feedback__form_email", type="email", placeholder="Электронная почта", name="email", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\\.[a-z]{2,10}$", required)
+				i(class="fa fa-envelope-o feedback__form_input_icon")
+				
+			div(class="feedback__form_input_wrap")
+				input(class="feedback__form_input", id="feedback__form_phone", type="text", placeholder="Номер телефона", name="phone", pattern="^[\\\+\\\(\\\)\\\-\\\s0-9]{10,18}$", required)
+				i(class="fa fa-phone feedback__form_input_icon")
+				
+			div(class="feedback__form_message_wrap")
+				textarea(class="feedback__form_message", id="feedback__form_message", placeholder="Сообщение", name="message", required)
+				i(class="fa fa-keyboard-o feedback__form_message_icon")
+					
+			button(class="button feedback__form_button", type="submit") отправить

@@ -1,0 +1,66 @@
+.services
+	grid-row: 4
+	&__container
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		justify-content: center
+
+		@include media-breakpoint-up(sm)
+			justify-content: flex-start
+	&__heading
+		align-items: center
+		align-self: center
+
+		width: 100%
+
+		text-align: center
+
+		grid-column: 1 / 13
+		@include media-breakpoint-up(sm)
+			text-align: left
+	&__item
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		width: 92.5%
+		margin-top: 50px
+
+		grid-column: 1 / 4
+		@include media-breakpoint-up(lg)
+			width: 25%
+		@include media-breakpoint-up(sm)
+			width: 50%
+		@include media-breakpoint-up(sm)
+			justify-content: flex-start
+
+		&_icon
+			align-self: center
+			order: 0
+
+			padding-right: 15px
+
+			color: #555555
+
+			font-family: FontAwesome
+			font-size: 2.5em
+		&_title
+			align-self: center
+			order: 0
+
+			color: #555555
+
+			font-size: 1.375em
+			font-weight: 400
+		&_text
+			order: 1
+
+			padding: 5px 0 0 0
+
+			text-align: center
+
+			@include media-breakpoint-up(sm)
+				padding: 10px 20px 0 0
+
+				text-align: left

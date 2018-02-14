@@ -1,0 +1,77 @@
+.skills
+	grid-row: 5
+	&__heading
+		grid-column: 1 / 13
+		text-align: center
+		@include media-breakpoint-up(sm)
+			text-align: left
+			grid-column: 1 / 7
+	&__ul
+		grid-column: 1 / 13
+		grid-row: 2
+		@include media-breakpoint-up(md)
+			grid-column: 1 / 7
+			grid-row: 2
+		&_li
+			display: flex
+			color: #8c8c8c
+			font-size: 0.875em
+			font-weight: 300
+			align-items: center
+			margin-top: 12px
+			&:first-child
+				margin-top: 0
+			&::before
+				font-family: FontAwesome
+				color: #c7b299
+				content: '\f138'
+				font-size: 1.4375rem
+				padding: 0 15px 0 0
+
+	&__list
+		grid-column: 1 / 13
+		grid-row: 3
+		margin-top: 80px
+		@include media-breakpoint-up(md)
+			grid-column: 7 / 13
+			grid-row: 2
+			margin-top: 0
+		&_title
+			position: absolute
+			left: 0
+
+			margin-top: -25px
+
+			color: #9b9b9a
+
+			font-size: .75em
+			font-weight: 600
+		&_percentage
+			position: relative
+			bottom: 25px
+			left: 18px
+			display: block
+
+			text-align: right
+
+			opacity: 0
+			color: #cebca6
+
+			font-size: .875em
+			font-weight: 600
+		&_bar
+			position: relative
+
+			height: 13px
+			margin-top: 50px
+
+			background-color: #eaeaea
+			&:first-child
+				margin-top: 0
+		&_progress
+			width: 0
+			height: 13px
+
+			background-color: #c7b299
+		&_animate
+			transition: all 2.5s ease

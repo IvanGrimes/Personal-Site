@@ -1,0 +1,28 @@
+.button
+	position: relative
+	display: flex
+	width: 170px
+	height: 45px
+	background-color: #998675
+	z-index: 1
+	cursor: pointer
+	justify-content: center
+	align-items: center
+	font-size: .875em
+	font-weight: 500
+	color: #fff
+	line-height: 1
+	text-transform: uppercase
+	&::before
+		position: absolute
+		content: ''
+		left: 0
+		height: 3px
+		width: 170px
+		bottom: 0
+		background-color: #736357
+		transition: all .5s ease
+		z-index: -1
+	&:hover
+		&::before
+			height: 100%

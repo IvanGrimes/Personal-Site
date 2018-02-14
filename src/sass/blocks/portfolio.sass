@@ -1,0 +1,301 @@
+.portfolio
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+
+	grid-row: 6
+	&__heading
+		order: 0
+	&__text
+		order: 1
+
+		padding: 25px 15px 45px 15px
+
+		text-align: center
+
+		@include media-breakpoint-up(lg)
+			padding: 25px 25% 45px 25%
+	&__gallery
+		display: flex
+		flex-wrap: wrap
+		order: 3
+
+		width: 100%
+		&_button
+			width: 100%
+			padding: 20px 0 20px 0
+
+			text-transform: uppercase
+
+			color: #fff
+			background-color: #c7b299
+
+			font-size: .875em
+			font-weight: 600
+	&__tags
+		display: flex
+		justify-content: center
+
+		padding: 0 0 50px 0
+		&_tag
+			box-sizing: border-box
+			height: 30px
+			margin: 0 0 0 10px
+			padding: 0 23px 0 23px
+
+			transition: all .15s linear
+
+			color: #8c8c8c
+			border: 1px solid #d1d1d1
+			background-color: transparent
+
+			font-size: .875em
+			font-weight: 300
+			&:not(.portfolio__tags_active)
+				&:hover
+					color: #c7b29a
+					border-color: #c7b29a
+					text-shadow: .5px 0px 0px #c7b29a
+					//nice hack *__*
+			&:first-child
+				margin: 0
+		&_active
+			position: relative
+
+			color: #c7b29a
+			border-color: #c7b29a
+			border-bottom-width: 3px
+			text-shadow: .5px 0px 0px #c7b29a
+
+			font-size: .875em
+
+	&__item
+		position: relative
+
+		width: 100%
+		margin: 0
+		padding: 0
+
+		z-index: 1
+
+		cursor: pointer
+		transition: all .15s linear
+
+		@include media-breakpoint-up(md)
+			width: 20%
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			display: flex
+			align-items: center
+			justify-content: center
+
+			width: 100%
+			height: 100%
+
+			content: ''
+			transition: all .5s linear
+
+			opacity: 0
+			color: #fff
+			background-color: rgba(121, 109, 100, 1)
+
+			font-size: 5em
+			font-weight: 100
+		&:not(.portfolio__item_active)
+			&:hover
+				z-index: 3
+				box-shadow: 0px 14px 35px 0px rgba(0, 0, 1, .7)
+				&::after
+					opacity: .5
+		&_active
+			position: relative
+			box-shadow: 0px 14px 35px 0px rgba(0, 0, 1, .7)
+			z-index: 2
+			&::after
+				position: absolute
+				top: 0
+				left: 0
+				display: flex
+				align-items: center
+				justify-content: center
+
+				width: 100%
+				height: 100%
+
+				content: '+'
+				transition: all .5s linear
+
+				opacity: 0
+				color: #fff
+				background-color: rgba(121, 109, 100, 1)
+
+				font-size: 5em
+				font-weight: 100
+			&::before
+				position: absolute
+				bottom: 0
+				left: calc(50% - 20px)
+				z-index: 1
+				width: 0
+				height: 0
+
+				content: ''
+
+				opacity: 1
+				border-width: 0 20px 15px 20px
+				border-style: solid
+				border-color: transparent transparent #363636
+		&_image
+			display: block
+
+			width: 100%
+			height: auto
+
+	&__panel
+		z-index: 4
+		//нужно разместить &__panel под каждым &__item, и через htn-child назначить order, тогда будет круто
+
+		display: none
+		justify-content: center
+		//z-index фиксит portfolio__panel_close при slideDown()
+
+		width: 100vw
+
+		background-color: #363636
+		&_close
+			z-index: 1
+			right: 0
+			//переделать на просто крестик
+
+			display: none
+			align-items: center
+			justify-content: center
+
+			cursor: pointer
+			transition: opacity .15s linear
+
+			opacity: .85
+			background-color: #c7b299
+			&:hover
+				opacity: 1
+			&::before
+				content: '\f00d'
+
+				color: #363636
+
+				font-family: FontAwesome
+				font-size: 2em
+				line-height: 1.25
+		&_content
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			justify-content: center
+
+			max-width: 1200px
+
+			background-color: #363636
+			padding: 60px 15px
+
+		&_slider
+			display: block
+			width: 100%
+			@include media-breakpoint-only(xl)
+				width: 65%
+				max-height: 500px
+
+		&_image
+			width: 100%
+			height: auto
+
+		&_info
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+
+			width: 100%
+			padding: 50px 0 0 0
+			height: 370px
+			@include media-breakpoint-only(xl)
+				justify-content: flex-start
+				width: 35%
+				padding: 0 0 0 30px
+		&_title
+			display: flex
+			width: 100%
+			color: #c7b29a
+			justify-content: center
+
+			font-size: 2.625em
+			font-weight: 500
+			line-height: .72
+			@include media-breakpoint-only(xl)
+				justify-content: flex-start
+		&_description
+			display: flex
+			align-self: center
+			justify-content: center
+
+			width: 100%
+			padding: 30px 0 0 0
+
+			color: #8c8c8c
+
+			font-size: 1.188em
+			font-weight: 500
+			@include media-breakpoint-only(xl)
+				justify-content: flex-start
+		&_text
+			text-align: center
+			width: 100%
+			padding: 25px 0 25px 0
+			@include media-breakpoint-only(xl)
+				text-align: left
+			@include media-breakpoint-only(lg)
+				padding: 25px 25% 25px 25%
+			@include media-breakpoint-only(md)
+				padding: 25px 15% 25px 15%
+			@include media-breakpoint-only(sm)
+				padding: 25px 7.5% 25px 7.5%
+
+	&__details
+		display: flex
+		align-self: flex-end
+		flex-wrap: wrap
+		&_item
+			display: flex
+
+			width: 100%
+			padding: 15px 0 15px 0
+
+			border-bottom: 1px solid #464646
+			&:first-child
+				padding: 0 0 15px 0
+			&:last-child
+				padding: 15px 0 0 0
+
+				border-bottom: 0
+		&_name
+			width: 35%
+
+			color: #8c8c8c
+
+			font-size: 0.875em
+			font-weight: 600
+		&_link
+			padding: 0 0 5px 0
+
+			transition: color .15s linear
+			transition: border .15s linear
+
+			color: #c7b29a
+			border-bottom: 1px solid rgba(199, 178, 154, .7)
+
+			font-size: 0.95em
+			font-weight: 400
+			line-height: 1
+			&:hover
+				color: #fff
+				border-color: rgba(199, 178, 154, 0)

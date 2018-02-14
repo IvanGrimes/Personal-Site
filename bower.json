@@ -1,0 +1,24 @@
+{
+  "name": "project",
+  "description": "",
+  "main": "",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "components-font-awesome": "^4.7.0",
+    "coreSlider": "^1.2.2",
+    "mixitup": "^3.2.2",
+    "jquery-modal": "^0.9.1",
+    "owl.carousel": "^2.2.1",
+    "susy": "3.0.1",
+    "jQuery-viewport-checker": "^1.8.8"
+  }
+}

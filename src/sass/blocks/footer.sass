@@ -1,0 +1,26 @@
+.footer
+	display: flex
+	grid-column: 1 / 4
+	justify-content: center
+	align-content: center
+	flex-wrap: wrap
+	grid-row: 9
+	padding: 100px 0 40px 0
+	&__back
+		cursor: pointer
+		font-family: FontAwesome
+		font-style: normal
+		font-size: 1.5em
+		color: darken(#d1d1d1,10%)
+		&::before
+			position: absolute
+			content: '\f077'
+			margin-left: 42.5px
+		&::after
+			position: absolute
+			margin-left: 42.5px
+			content: '\f077'
+			margin-top: 12px
+
+	&__text
+		margin-top: 60px

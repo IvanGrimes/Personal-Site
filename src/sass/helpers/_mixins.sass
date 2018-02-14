@@ -1,0 +1,9 @@
+@mixin g($color1, $color2)
+	background-image: -webkit-linear-gradient($color1, $color2)
+	background-image: -o-linear-gradient($color1, $color2)
+	background-image: linear-gradient($color1, $color2)
+
+@mixin gl($color1, $color2)
+	background-image: -webkit-linear-gradient(left, $color1, $color2)
+	background-image: -o-linear-gradient(left, $color1, $color2)
+	background-image: linear-gradient(to right, $color1, $color2)
